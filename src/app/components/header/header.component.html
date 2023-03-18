@@ -1,0 +1,10 @@
+<nav [ngClass]="{ 'changeHeader': onChangeHeader }">
+  <img src="../../../assets/icon/Logo_Icon.svg" alt="Logo" (click)="onClick()" routerLink="home"/>
+  <ul>
+    <li (click)="onClick($event.target)" routerLink="home" routerLinkActive="active">Home</li>
+    <li (click)="onClick($event.target)" routerLink="about" routerLinkActive="active">Sobre Mim</li>
+    <li (click)="onClick($event.target)" routerLink="project" routerLinkActive="active">Projetos</li>
+    <li (click)="onClick($event.target)" routerLink="skill" routerLinkActive="active">Skills</li>
+    <li (click)="onClick($event.target)" routerLink="contact" routerLinkActive="active">Contato</li>
+  </ul>
+</nav>

@@ -1,0 +1,73 @@
+@import "../../../assets/variables.scss";
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 110px;
+  height: 100px;
+
+  img {
+    width: 75px;
+  }
+
+  img:hover {
+    cursor: pointer;
+  }
+
+  h1 {
+    font-size: 1.6em;
+    color: $white;
+    position: relative;
+    cursor: pointer;
+    pointer-events: all;
+    letter-spacing: 4px;
+
+    span {
+      color: $blue;
+    }
+  }
+
+  ul {
+    display: flex;
+    margin: 0;
+
+    li {
+      position: relative;
+      list-style: none;
+      font-size: 1.5em;
+      font-weight: 400;
+      padding: 12px 18px;
+      pointer-events: all;
+      transition: 0.3s;
+      overflow: hidden;
+    }
+
+    li:after {
+      content: "";
+      position: absolute;
+      bottom: 5px;
+      height: 3px;
+      width: 0%;
+      left: 50%;
+      background: $blue;
+      transform: translateX(-50%);
+      transition: 0.3s;
+    }
+
+    li:hover,
+    li.active {
+      cursor: pointer;
+      color: $blue;
+    }
+
+    li:hover:after {
+      width: 80%;
+    }
+  }
+}
+
+.changeHeader {
+  background: $gray;
+}

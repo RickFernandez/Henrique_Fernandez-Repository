@@ -1,0 +1,88 @@
+div.mainContent {
+  position: relative;
+  overflow: hidden;
+
+  .header {
+    position: fixed;
+    width: 100%;
+    height: 6vh;
+    z-index: 10;
+    top: 0;
+  }
+
+  .contentContainer {
+    width: 100vw;
+    height: 100vh;
+    padding: 10vh 5rem 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    bottom: 0;
+    height: 4vh;
+  }
+
+  .whiteBall::before {
+    content: "";
+    position: absolute;
+    left: calc(50% - 50px);
+    bottom: -100px;
+    z-index: 100;
+    border-radius: 50%;
+    color: transparent;
+    background: white;
+    animation: onBall 2s ease-out forwards, onFill 4s 1s normal forwards,
+      onChangeColor 1s 2.5s linear alternate both,
+      onUnfill 1s linear 4s forwards;
+  }
+}
+
+@keyframes onBall {
+  0% {
+    width: 20px;
+    height: 20px;
+    bottom: -100px;
+  }
+  50% {
+    bottom: 60%;
+  }
+  100% {
+    width: 70px;
+    height: 70px;
+    bottom: 50%;
+  }
+}
+
+@keyframes onFill {
+  to {
+    transition-property: transform;
+    transition-duration: 3s;
+    transition-delay: 2s;
+    transform: translate(0, 0) scale(35);
+  }
+}
+
+@keyframes onChangeColor {
+  0% {
+    background: white;
+  }
+  50% {
+    background: #00bfff;
+  }
+  100% {
+    background: #111;
+  }
+}
+
+@keyframes onUnfill {
+  to {
+    transition-property: transform;
+    transition-duration: 1.5s;
+    transform: translate(0, 0) scale(0);
+  }
+}

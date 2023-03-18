@@ -1,0 +1,88 @@
+@import "../../../assets/variables.scss";
+
+.bgAnimation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  background: $dark_gray;
+  filter: saturate(2);
+  overflow: hidden;
+}
+
+.backgroundAmim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: $blue;
+  filter: blur(60px);
+  animation: aniBack 6s linear infinite;
+}
+
+@keyframes aniBack {
+  0% {
+    top: -60px;
+  }
+  100% {
+    top: 120%;
+  }
+}
+
+.mainContent {
+  backdrop-filter: blur(1px);
+  pointer-events: none;
+
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    text-align: center;
+    pointer-events: none;
+
+    .textBox {
+      h1 {
+        font-size: 4em;
+
+        span {
+          color: $blue;
+        }
+      }
+
+      p {
+        font-size: 1.4em;
+
+        span {
+          color: $blue;
+        }
+      }
+
+      .homeBtn {
+        font-family: "Poppins";
+        padding: 8px 18px;
+        margin: 16px 12px;
+        font-size: 26px;
+        background-color: transparent;
+        color: var(--i);
+        outline: none;
+        border: 3px solid var(--i);
+        border-radius: 4px;
+        cursor: pointer;
+        pointer-events: all;
+        transition: 0.3s;
+        font-weight: 600;
+      }
+
+      .homeBtn:hover {
+        background-color: var(--i);
+        color: $black;
+      }
+    }
+  }
+}
