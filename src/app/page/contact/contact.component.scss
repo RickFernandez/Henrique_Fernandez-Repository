@@ -1,0 +1,245 @@
+@import "../../../assets/variables.scss";
+
+.contactContent {
+  width: 100vw;
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-inline: 10rem;
+
+  .contactText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    img {
+      width: 35rem;
+      margin: 2rem 0 4rem;
+      animation: translateImg 5s linear infinite;
+    }
+
+    p {
+      font-size: 2.6rem;
+      letter-spacing: 0.1em;
+      color: $white;
+      text-shadow: 0 0 3px $blue;
+    }
+
+    .contactLinks {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      justify-content: space-between;
+
+      a {
+        text-decoration: none;
+        width: 20rem;
+        height: 5rem;
+        background-color: $gray;
+        color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: .5px;
+        border-radius: 2rem;
+        border: 1px solid $blue;
+        gap: .5rem;
+        letter-spacing: 0.05em;
+        transform: scale(1);
+        transition: transform 0.5s;
+
+        svg {
+          width: 2rem;
+          color: $white;
+        }
+      }
+
+      a:hover {
+        transition: transform 0.5s;
+        transform: scale(1.05);
+        border: none;
+        background-color: $blue;
+        color: $black;
+        font-weight: 600;
+
+        svg {
+          color: $black;
+        }
+      }
+    }
+  }
+
+  .formBox {
+    position: relative;
+    width: 50rem;
+    height: 54rem;
+    background-color: $dark_gray;
+    border-radius: .8rem;
+    overflow: hidden;
+  }
+
+  .formBox:before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 50rem;
+    height: 54rem;
+    background: linear-gradient(0deg, transparent, $blue, $blue);
+    transform-origin: bottom right;
+    animation: onRotate 6s linear infinite;
+  }
+
+  .formBox:after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 50rem;
+    height: 54rem;
+    background: linear-gradient(0deg, transparent, $blue, $blue);
+    transform-origin: bottom right;
+    animation: onRotate 6s linear -3s infinite;
+  }
+
+  .form {
+    position: absolute;
+    inset: .2rem;
+    z-index: 10;
+    background-color: $gray;
+    border-radius: .8rem;
+    padding: 5rem 4rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      color: $blue;
+      font-weight: 500;
+      text-align: center;
+      letter-spacing: 0.1em;
+    }
+
+    .inputBox {
+      position: relative;
+      margin-top: 3.5rem;
+      width: 100%;
+
+      input {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        padding: 2rem 1rem 1rem;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: $gray;
+        letter-spacing: 0.05em;
+      }
+
+      label {
+        position: absolute;
+        left: 0;
+        padding: 2rem 0 1rem;
+        letter-spacing: 0.05em;
+        color: $light_gray;
+        pointer-events: none;
+        transition: 0.5s;
+      }
+
+      input:valid ~ label,
+      input:focus ~ label {
+        color: $blue;
+        transform: translateY(-34px);
+        font-size: 0.75em;
+      }
+
+      span {
+        position: absolute;
+        z-index: 9;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: .2rem;
+        background-color: $blue;
+        border-radius: .4rem;
+        transition: 0.5s;
+        pointer-events: none;
+      }
+
+      input:valid ~ span,
+      input:focus ~ span {
+        height: 4.4rem;
+      }
+    }
+
+    textarea {
+      background-color: $blue;
+      padding: 1rem;
+      border: none;
+      border-radius: .4rem;
+      color: $gray;
+      resize: none;
+      height: 40rem;
+    }
+
+    textarea:focus {
+      box-shadow: 0 0 0 0;
+      border: 0 none;
+      outline: 0;
+    }
+
+    input::selection,
+    textarea::selection {
+      background-color: $gray;
+      color: $white;
+    }
+
+    .button {
+      border: none;
+      outline: none;
+      border-radius: 2rem;
+      background-color: $blue;
+      padding: 1.1rem 2.5rem;
+      width: 30rem;
+      margin-top: 4rem;
+      font-weight: 600;
+      font-size: 1.4rem;
+      transition: transform .5s;
+      transform: scale(1);
+    }
+
+    .button:hover {
+      cursor: pointer;
+      transition: transform .5s;
+      transform: scale(1.05);
+    }
+
+    .button:focus {
+      border: 1px solid $white;
+    }
+  }
+}
+
+@keyframes onRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes translateImg {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

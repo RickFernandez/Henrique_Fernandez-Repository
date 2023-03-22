@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -12,6 +13,9 @@ import { ProjectComponent } from './page/project/project.component';
 import { SkillComponent } from './page/skill/skill.component';
 import { ContactComponent } from './page/contact/contact.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
+import { ContentComponent } from './components/content/content.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -24,11 +28,15 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
     ProjectComponent,
     SkillComponent,
     ContactComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    ContentComponent,
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    NgbCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

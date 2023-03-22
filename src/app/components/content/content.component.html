@@ -1,0 +1,11 @@
+<div class="mainContent">
+  <app-header class="header" [ngClass]="{'changeHeader' : onChangeHeader === true, 'noChanges' : onChangeHeader === false}" [onChangeHeader]="onChangeHeader"></app-header>
+  <div class="contentContainer">
+    <router-outlet
+      class="content"
+    ></router-outlet>
+
+  </div>
+  <app-footer class="footer"></app-footer>
+</div>
+

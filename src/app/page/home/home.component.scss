@@ -19,7 +19,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
+  height: 6rem;
   background: $blue;
   filter: blur(60px);
   animation: aniBack 6s linear infinite;
@@ -48,41 +48,85 @@
 
     .textBox {
       h1 {
-        font-size: 4em;
+        font-size: 6rem;
+        color: $blue;
 
         span {
-          color: $blue;
+          font-size: 1.8rem;
+          color: $white;
+          display: block;
+          margin-block: 1rem;
+          letter-spacing: 1rem;
+
+          span {
+            color: $blue;
+          }
         }
       }
 
       p {
-        font-size: 1.4em;
+        margin: 0;
+        font-size: 3rem;
+        text-align: center;
+      }
 
-        span {
-          color: $blue;
+      .btns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .homeBtn {
+          font-family: "Poppins";
+          padding: 1rem 2rem;
+          margin: 1.6rem 1.2rem;
+          font-size: 2.6rem;
+          background-color: transparent;
+          color: var(--i);
+          outline: none;
+          border: 3px solid var(--i);
+          border-radius: .4rem;
+          cursor: pointer;
+          pointer-events: all;
+          transition: 0.3s;
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 15px;
+          text-decoration: none;
+
+          svg {
+            width: 3rem;
+            height: 3rem;
+
+          }
+        }
+
+        .homeBtn:hover {
+          background-color: var(--i);
+          color: $black;
+        }
+
+        .homeBtn:nth-child(2):hover > svg {
+          animation: onExplorer 1s linear infinite;
         }
       }
 
-      .homeBtn {
-        font-family: "Poppins";
-        padding: 8px 18px;
-        margin: 16px 12px;
-        font-size: 26px;
-        background-color: transparent;
-        color: var(--i);
-        outline: none;
-        border: 3px solid var(--i);
-        border-radius: 4px;
-        cursor: pointer;
-        pointer-events: all;
-        transition: 0.3s;
-        font-weight: 600;
-      }
-
-      .homeBtn:hover {
-        background-color: var(--i);
-        color: $black;
-      }
     }
+  }
+}
+
+@keyframes onExplorer {
+  0% {
+    transition: transform .3s;
+    transform: translateX(0);
+  }
+  50% {
+    transition: transform .3s ease-in-out;
+    transform: translateX(5px);
+  }
+  100% {
+    transition: transform .3s;
+    transform: translateX(0);
   }
 }

@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "./assets/variables.scss";
+@import "bootstrap/scss/bootstrap";
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
 
 * {
   margin: 0;
@@ -9,15 +12,15 @@
 }
 
 :root {
-  // font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body,
 html {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   color: $white;
-  background: $black;
+  background-color: $black;
   font-family: "Poppins", sans-serif;
 }
 
@@ -33,4 +36,16 @@ html {
 .colorBox:hover {
   background: $blue;
   transition-duration: 0s;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+li {
+  font-size: 2.5rem;
+}
+
+a, input, label, textarea {
+  font-size: 1.4rem !important;
 }

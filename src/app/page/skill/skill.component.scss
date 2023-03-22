@@ -1,0 +1,59 @@
+@import "../../../assets/variables.scss";
+
+div.skillsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  img.Skills_Img {
+    width: 500px;
+    animation: onImg 3s linear infinite;
+  }
+
+  div.skills {
+    display: flex;
+    margin: 0 150px;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 100px;
+
+    div {
+      width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      h2 {
+        margin-bottom: 25px;
+        text-decoration: underline;
+
+      }
+
+      div {
+        display: flex;
+        gap: 20px;
+      }
+    }
+
+    div > img {
+      background-color: $gray;
+      padding: 15px;
+      height: 90px;
+      width: 90px;
+    }
+  }
+}
+
+@keyframes onImg {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

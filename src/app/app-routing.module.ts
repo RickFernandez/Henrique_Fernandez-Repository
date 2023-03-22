@@ -10,13 +10,13 @@ import { HomeComponent } from './page/home/home.component';
 import { of, delay } from 'rxjs';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent, resolve: { load: 'loading' } },
-  { path: 'about', component: AboutComponent, resolve: { load: 'loading' }},
-  { path: 'project', component: ProjectComponent, resolve: { load: 'loading' } },
-  { path: 'skill', component: SkillComponent, resolve: { load: 'loading' } },
-  { path: 'contact', component: ContactComponent, resolve: { load: 'loading' } },
-  { path: '**', component: NotFoundComponent, resolve: { load: 'loading' } },
-  { path: '', redirectTo: 'home', pathMatch: 'full', resolve: { load: 'loading' } }
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'project', component: ProjectComponent },
+  { path: 'skill', component: SkillComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({

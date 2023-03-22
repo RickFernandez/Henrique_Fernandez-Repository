@@ -1,12 +1,1 @@
-<div class="mainContent">
-  <app-header class="header" (callParent)="onCallParent()" *ngIf="isAvailable" [ngClass]="{'changeHeader' : onChangeHeader === true, 'noChanges' : onChangeHeader === false}" [onChangeHeader]="onChangeHeader"></app-header>
-  <div class="contentContainer">
-    <router-outlet
-      class="content"
-      (callParent)="onCallParent()"
-    ></router-outlet>
-
-  </div>
-  <app-footer class="footer" *ngIf="isAvailable"></app-footer>
-  <div class="whiteBall" *ngIf="whiteBallActive"></div>
-</div>
+<app-content></app-content>

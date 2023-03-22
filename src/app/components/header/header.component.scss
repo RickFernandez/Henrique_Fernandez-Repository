@@ -5,50 +5,39 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 110px;
-  height: 100px;
+  padding: 0 11rem;
+  height: 10rem;
 
   img {
-    width: 75px;
+    width: 7.5rem;
+    opacity: 1;
   }
 
   img:hover {
     cursor: pointer;
   }
 
-  h1 {
-    font-size: 1.6em;
-    color: $white;
-    position: relative;
-    cursor: pointer;
-    pointer-events: all;
-    letter-spacing: 4px;
-
-    span {
-      color: $blue;
-    }
-  }
-
   ul {
     display: flex;
     margin: 0;
+    opacity: 1;
 
     li {
       position: relative;
       list-style: none;
-      font-size: 1.5em;
       font-weight: 400;
-      padding: 12px 18px;
+      padding: 1.2rem 1.8rem;
       pointer-events: all;
       transition: 0.3s;
       overflow: hidden;
+      opacity: 1;
     }
 
     li:after {
       content: "";
       position: absolute;
-      bottom: 5px;
-      height: 3px;
+      bottom: .5rem;
+      height: .3rem;
       width: 0%;
       left: 50%;
       background: $blue;
@@ -69,5 +58,6 @@ nav {
 }
 
 .changeHeader {
-  background: $gray;
+  background-color: $gray;
+  box-shadow: 0px 5px 5px -1px rgba(255,255,255,0.15);
 }
