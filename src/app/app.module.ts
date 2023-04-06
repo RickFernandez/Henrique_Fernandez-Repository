@@ -16,6 +16,7 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
 import { ContentComponent } from './components/content/content.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
     ContactComponent,
     ProjectCardComponent,
     ContentComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserAnimationsModule,

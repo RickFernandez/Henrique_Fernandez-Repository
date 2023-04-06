@@ -14,7 +14,7 @@
     align-items: center;
     text-align: center;
 
-    img {
+    img.contact-img {
       width: 35rem;
       margin: 2rem 0 4rem;
       animation: translateImg 5s linear infinite;
@@ -50,9 +50,10 @@
         transform: scale(1);
         transition: transform 0.5s;
 
-        svg {
+        img.contact-link-icon {
           width: 2rem;
-          color: $white;
+          stroke: $white;
+          fill: $white;
         }
       }
 
@@ -62,10 +63,10 @@
         border: none;
         background-color: $blue;
         color: $black;
-        font-weight: 600;
+        font-weight: 700;
 
-        svg {
-          color: $black;
+        img.contact-link-icon {
+          filter: contrast(0) brightness(0) !important;
         }
       }
     }
@@ -269,7 +270,6 @@
       .formBox,
       .formBox:before,
       .formBox:after {
-
         height: 50rem;
       }
 

@@ -1,5 +1,6 @@
 <div class="mainContent">
   <app-header class="header" [ngClass]="{'changeHeader' : onChangeHeader === true, 'noChanges' : onChangeHeader === false}" [onChangeHeader]="onChangeHeader"></app-header>
+  <app-navbar class="header" [ngClass]="{'changeHeader' : onChangeHeader === true, 'noChanges' : onChangeHeader === false}" [onChangeHeader]="onChangeHeader"></app-navbar>
   <div class="contentContainer">
     <router-outlet
       class="content"
