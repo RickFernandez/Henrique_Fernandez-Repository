@@ -1,8 +1,6 @@
 @import "../../../assets/variables.scss";
 
 .card {
-  // max-width: 70rem;
-  // max-height: 70rem;
   width: 120rem;
   padding: 10rem 6rem 6rem;
   border-radius: 2rem;
@@ -51,11 +49,11 @@
       font-weight: 700;
     }
 
-    .card-description {
+    p.card-description {
       font-size: 1.8rem;
     }
 
-    .card-technology {
+    p.card-technology {
       margin-block: 1rem;
       font-size: 1.6rem;
       color: #707070;
@@ -89,4 +87,148 @@
       }
     }
   }
+}
+
+@media screen and (max-width: 1024px) {
+  .card {
+    max-width: 70rem;
+    max-height: 120rem;
+    padding: 6rem 6rem 4rem;
+
+    .project-images {
+      height: 22vh;
+      position: relative;
+
+      .card-img {
+        position: absolute;
+        display: block;
+      }
+
+      .project-image-pc {
+        left: 2rem;
+        height: 20rem;
+      }
+
+      .project-image-cell {
+        right: -25rem;
+        height: 18rem;
+      }
+
+      .project-image-tablet {
+        left: -23rem;
+        height: 18rem;
+      }
+    }
+
+    .card-body {
+      .card-number {
+        font-size: 12rem;
+      }
+
+      p.card-description,
+      p.card-technology {
+        font-size: 1.4rem;
+      }
+
+      .card-buttons {
+        .btn {
+          width: 20rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  div.card {
+    max-width: 50rem;
+    max-height: 70rem;
+    padding: 6rem 6rem 4rem;
+
+    div.project-images {
+      img.project-image-pc {
+        left: 1rem;
+        height: 14rem;
+      }
+
+      img.project-image-cell {
+        right: -17rem;
+        height: 12rem;
+      }
+
+      img.project-image-tablet {
+        left: -16rem;
+        height: 12rem;
+      }
+    }
+
+    div.card-body {
+      .card-number {
+        font-size: 10rem;
+      }
+
+      h5 {
+        font-size: 3rem;
+      }
+
+      p.card-description,
+      p.card-technology {
+        font-size: 1.2rem;
+      }
+
+      div.card-buttons {
+        a.btn {
+          width: 20rem;
+          height: 4rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  div.card {
+    width: 100%;
+    max-width: 40rem;
+    min-height: 60rem;
+    padding: 2rem;
+
+    .project-images {
+      height: 14vh;
+
+      .card-img {
+        bottom: 0;
+      }
+
+      .project-image-pc {
+        height: 10rem !important;
+        left: 0.5rem !important;
+      }
+
+      .project-image-cell,
+      .project-image-tablet {
+        right: -12rem !important;
+        height: 8rem !important;
+      }
+
+      .project-image-tablet {
+        left: -12rem !important;
+      }
+    }
+
+    .card-body {
+      margin-top: 4rem;
+    }
+
+    .card-buttons {
+      justify-content: center;
+
+      a {
+        width: 16rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
 }

@@ -83,3 +83,33 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .projectsContent {
+    padding-top: 10vh;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .projectsContent {
+    height: 90vh;
+    padding-top: 8vh;
+
+    .carousel-dot-container {
+      top: -1.5rem;
+    }
+
+    .btn-carousel {
+      bottom: -5rem !important;
+      top: 100% !important;
+    }
+
+    .btn-prev {
+      left: 1.5rem !important;
+    }
+
+    .btn-next {
+      right: 1.5rem !important;
+    }
+  }
+}

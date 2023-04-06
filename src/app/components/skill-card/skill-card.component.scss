@@ -1,0 +1,41 @@
+@import "../../../assets/variables.scss";
+
+div.skill-section {
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  h2 {
+    font-size: 4rem;
+    margin-bottom: 2.5rem;
+    text-decoration: underline;
+
+  }
+
+  div.skill-icon {
+    position: relative;
+    display: flex;
+    gap: 2rem;
+
+    img {
+      background-color: $gray;
+      padding: 1.5rem;
+      height: 9rem;
+      width: 9rem;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  div.skill-icon:hover {
+    span {
+      position: absolute;
+      display: block;
+    }
+  }
+}

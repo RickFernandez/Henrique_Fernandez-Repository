@@ -1,0 +1,9 @@
+<div class="skill-section" *ngFor="let skill of skills">
+  <h2 class="skill-title">{{ skill.skillTitle }}</h2>
+  <div class="skill-icon" *ngFor="let skillIcon of skill.skillSection.skillIcons">
+    <img src="{{ skillIcon.skillImgSrc }}" alt="{{ skillIcon.skillImgAlt }}" class="skill-img">
+    <span class="skill-legend">
+      {{ skillIcon.skillLegend }}
+    </span>
+  </div>
+</div>

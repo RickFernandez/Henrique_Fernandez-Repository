@@ -2,8 +2,6 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "./assets/variables.scss";
 @import "bootstrap/scss/bootstrap";
-@import "ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
-@import "ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
 
 * {
   margin: 0;
@@ -17,8 +15,8 @@
 
 body,
 html {
-  width: 100%;
-  height: 100vh;
+  overflow: hidden;
+  max-width: 100%;
   color: $white;
   background-color: $black;
   font-family: "Poppins", sans-serif;
@@ -26,11 +24,11 @@ html {
 
 .colorBox {
   z-index: 2;
-  filter: brightness(1.1);
-  transition: 2s ease;
-  position: relative;
   margin: 2px;
+  position: relative;
+  transition: 2s ease;
   background: $dark_gray;
+  filter: brightness(1.1);
 }
 
 .colorBox:hover {
@@ -46,6 +44,37 @@ li {
   font-size: 2.5rem;
 }
 
-a, input, label, textarea {
+a,
+input,
+label,
+textarea {
   font-size: 1.4rem !important;
+}
+
+@media screen and (max-width: 1024px) {
+  p {
+    font-size: 1.4rem;
+  }
+
+  li {
+    font-size: 2rem;
+  }
+
+  a,
+  input,
+  label,
+  textarea {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body,
+  html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  p {
+    font-size: 1.2rem !important;
+  }
 }

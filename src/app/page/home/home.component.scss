@@ -57,10 +57,6 @@
           display: block;
           margin-block: 1rem;
           letter-spacing: 1rem;
-
-          span {
-            color: $blue;
-          }
         }
       }
 
@@ -72,6 +68,7 @@
 
       .btns {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
 
@@ -128,5 +125,61 @@
   100% {
     transition: transform .3s;
     transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .mainContent {
+    section {
+      .textBox {
+        h1 {
+          font-size: 5rem;
+
+          span {
+            letter-spacing: .7rem;
+          }
+        }
+
+        .btns {
+          .homeBtn{
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .textBox {
+    padding-inline: 2rem !important;
+
+    p {
+      font-size: 2rem !important;
+    }
+
+    h1 {
+      font-size: 4rem !important;
+
+      span {
+        margin-bottom: 2rem !important;
+        font-size: 1.4rem !important;
+        letter-spacing: .3rem !important;
+      }
+    }
+
+    .btns {
+      .homeBtn {
+        gap: 8px !important;
+        margin: 1.5rem 2rem !important;
+        padding: 1rem 2rem !important;
+        font-size: 1.6rem !important;
+
+        svg {
+          width: 2rem !important;
+          height: 2rem !important;
+        }
+      }
+    }
   }
 }

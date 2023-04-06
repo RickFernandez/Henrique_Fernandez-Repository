@@ -1,11 +1,12 @@
 @import "../../../assets/variables.scss";
 
 .notFoundConente {
-  background: $dark-gray;
+  background: transparent;
 
   img {
     width: 100vw;
     height: 100vh;
+    padding-top: 10vh;
   }
 }
 
