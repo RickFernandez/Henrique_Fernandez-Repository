@@ -25,6 +25,7 @@ div.skillsContainer {
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
+      justify-content: center;
 
 
       h2 {
@@ -107,8 +108,13 @@ div.skillsContainer {
 }
 
 @media screen and (max-width: 768px) {
-  div.skills {
-    flex-wrap: wrap;
-    padding-block: 5rem;
+  div.skillsContainer {
+    justify-content: center !important;
+
+    div.skills {
+      flex-wrap: wrap;
+      padding-block: 5rem;
+    }
   }
+
 }

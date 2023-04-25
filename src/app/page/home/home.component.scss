@@ -39,12 +39,18 @@
   pointer-events: none;
 
   section {
+    text-align: center;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 90vh;
-    text-align: center;
+    flex-direction: column;
     pointer-events: none;
+
+    img,
+    .shape {
+      display: none;
+    }
 
     .textBox {
       h1 {
@@ -81,7 +87,7 @@
           color: var(--i);
           outline: none;
           border: 3px solid var(--i);
-          border-radius: .4rem;
+          border-radius: 0.4rem;
           cursor: pointer;
           pointer-events: all;
           transition: 0.3s;
@@ -95,7 +101,6 @@
           svg {
             width: 3rem;
             height: 3rem;
-
           }
         }
 
@@ -108,22 +113,21 @@
           animation: onExplorer 1s linear infinite;
         }
       }
-
     }
   }
 }
 
 @keyframes onExplorer {
   0% {
-    transition: transform .3s;
+    transition: transform 0.3s;
     transform: translateX(0);
   }
   50% {
-    transition: transform .3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     transform: translateX(5px);
   }
   100% {
-    transition: transform .3s;
+    transition: transform 0.3s;
     transform: translateX(0);
   }
 }
@@ -136,12 +140,12 @@
           font-size: 5rem;
 
           span {
-            letter-spacing: .7rem;
+            letter-spacing: 0.7rem;
           }
         }
 
         .btns {
-          .homeBtn{
+          .homeBtn {
             font-size: 2rem;
           }
         }
@@ -150,34 +154,95 @@
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 425px) {
-  .textBox {
-    padding-inline: 2rem !important;
+@media screen and (max-width: 768px) {
+  .bgAnimation,
+  .backgroundAmim {
+    display: none;
+  }
 
-    p {
-      font-size: 2rem !important;
-    }
+  .mainContent {
+    position: relative;
+    overflow: hidden;
 
-    h1 {
-      font-size: 4rem !important;
+    section {
+      gap: 2rem;
 
-      span {
-        margin-bottom: 2rem !important;
-        font-size: 1.4rem !important;
-        letter-spacing: .3rem !important;
+      .shape {
+        display: block;
+        position: absolute;
+        width: 20rem;
+        height: 20rem;
+        background-image: linear-gradient(45deg, $white 0%, $blue 100%);
+        animation: morph 8s ease-in-out infinite;
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        transition: all 1s ease-in-out;
+        z-index: -1;
+        bottom: -5rem;
+        left: -5rem;
+      }
+
+      .s2 {
+        left: auto;
+        top: -5rem;
+        right: -5rem !important;
+      }
+
+      img {
+        width: 18rem;
+        display: block;
+        border-radius: 50%;
       }
     }
+  }
+}
 
-    .btns {
-      .homeBtn {
-        gap: 8px !important;
-        margin: 1.5rem 2rem !important;
-        padding: 1rem 2rem !important;
-        font-size: 1.6rem !important;
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    background: linear-gradient(45deg, var($blue) 0%, var($white) 100%);
+  }
 
-        svg {
-          width: 2rem !important;
-          height: 2rem !important;
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    background: linear-gradient(45deg, $blue 0%, var($white) 100%);
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    background: linear-gradient(45deg, var($blue) 0%, var($white) 100%);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mainContent {
+    section {
+      img {
+        width: 12rem !important;
+      }
+
+      .textBox {
+        padding-inline: 2rem !important;
+
+        p {
+          font-size: 2rem !important;
+        }
+
+        h1 {
+          font-size: 3rem !important;
+        }
+
+        .btns {
+          .homeBtn {
+            gap: 8px !important;
+            margin: 1.5rem 2rem !important;
+            padding: 1rem 2rem !important;
+            font-size: 1.6rem !important;
+
+            svg {
+              width: 2rem !important;
+              height: 2rem !important;
+            }
+          }
         }
       }
     }

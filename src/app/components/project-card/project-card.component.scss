@@ -89,6 +89,46 @@
   }
 }
 
+@media screen and (max-width: 1600px) {
+  .card {
+    width: 80rem;
+    padding: 3rem 6rem 3rem;
+
+    .project-images {
+      .card-img {
+        height: 10rem;
+      }
+    }
+
+    .card-body {
+      .card-number {
+        font-size: 8rem;
+      }
+
+      .card-title {
+        font-size: 3rem;
+      }
+
+      .card-description {
+        font-size: 1.6rem !important;
+      }
+      
+      .card-technology {
+        font-size: 1.4rem !important;
+      }
+
+      .card-buttons {
+        margin-top: 1rem;
+
+        .btn {
+          width: 20rem;
+          height: 4rem;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .card {
     max-width: 70rem;

@@ -269,7 +269,6 @@
       .formBox,
       .formBox:before,
       .formBox:after {
-
         height: 50rem;
       }
 
@@ -284,7 +283,7 @@
 
 @media screen and (max-width: 768px) {
   .contactContent {
-    padding-top: 10vh;
+    padding: 5rem 5rem 2rem;
     flex-direction: column;
 
     .contactText {
@@ -300,9 +299,8 @@
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 500px) {
   .contactContent {
-    padding: 6rem 2rem;
 
     .contactText {
       p {
@@ -312,7 +310,7 @@
 
     .formBox {
       height: 50rem;
-      max-width: 40rem;
+      max-width: 30rem;
 
       form {
         padding: 4rem 2rem 2rem;
@@ -322,19 +320,9 @@
         }
 
         button {
-          width: 30rem;
+          width: 20rem;
         }
       }
-    }
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .formBox {
-    width: 30rem !important;
-
-    form > button {
-      width: 20rem !important;
     }
   }
 }

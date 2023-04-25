@@ -22,15 +22,22 @@ div.aboutContent {
   }
 }
 
+@media screen and (max-width: 1600px) {
+  div.aboutContent {
+    p {
+      font-size: 1.6rem;
+    }
+    img {
+      width: 45rem;
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
   div.aboutContent {
     flex-direction: column;
     padding: 10vh 10rem 0;
     gap: 2rem;
-
-    p {
-      font-size: 1.4rem;
-    }
 
     img {
       width: 35rem;
@@ -40,7 +47,7 @@ div.aboutContent {
 
 @media screen and (max-width: 768px) {
   div.aboutContent {
-    padding: 5vh 10rem 0;
+    padding: 5rem 10rem 2rem;
 
     img {
       width: 30rem;
