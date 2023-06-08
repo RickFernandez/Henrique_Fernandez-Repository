@@ -15,23 +15,23 @@ export class ProjectComponent implements OnInit {
   projects: any[] = [
     {
       projectImagePc: {
-        imgSrcPc: '../../../assets/imgs/In_Progress(PC).svg',
-        imgAltPc: 'Projeto em construção exibido na tela de um computador',
+        imgSrcPc: '../../../assets/imgs/projects/DoctorCare_Desktop.svg',
+        imgAltPc: 'Projeto DoctorCare exibido na tela de um computador',
       },
       projectImageTablet: {
-        imgSrcTablet: '../../../assets/imgs/In_Progress(Tablet).svg',
-        imgAltTablet: 'Projeto em construção exibido na tela de um tablet',
+        imgSrcTablet: '../../../assets/imgs/projects/DoctorCare_Tablet.svg',
+        imgAltTablet: 'Projeto DoctorCare exibido na tela de um tablet',
       },
       projectImageCell: {
-        imgSrcCell: '../../../assets/imgs/In_Progress(Cell).svg',
-        imgAltCell: 'Projeto em construção exibido na tela de um celular',
+        imgSrcCell: '../../../assets/imgs/projects/DoctorCare_Phone.svg',
+        imgAltCell: 'Projeto DoctorCare exibido na tela de um celular',
       },
       number: '01',
-      title: 'Projeto 01',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem.',
-      technology: 'HTML, CSS, Angular, TypeScript, Bootstrap',
-      linkRepo: '#',
-      linkLive: '#',
+      title: 'DoctorCare',
+      description: 'Site relacionado a saúde e bem-estar, com o intúito de captura de leads para agendamentos de assistência médica. Foi desenvolvido seguindo o padrão SPA (Single Page Application), onde não possúi navegação em diversas telas, contém todas as informações em apenas uma tela só.',
+      technology: 'HTML, CSS, Javascript, Bootstrap, Responsividade',
+      linkRepo: 'https://github.com/RickFernandez/DoctorCare',
+      linkLive: 'https://hf-doctorcare.netlify.app/',
     },
     {
       projectImagePc: {
