@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
   }
 
   onClick(){
-    this.callParent.emit(null);
+    console.log("clicou");
+
   }
 }

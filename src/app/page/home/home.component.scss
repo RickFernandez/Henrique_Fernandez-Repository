@@ -62,7 +62,7 @@
           color: $white;
           display: block;
           margin-block: 1rem;
-          letter-spacing: 1rem;
+          letter-spacing: .8rem;
         }
       }
 
@@ -82,7 +82,7 @@
           font-family: "Poppins";
           padding: 1rem 2rem;
           margin: 1.6rem 1.2rem;
-          font-size: 2.6rem;
+          font-size: 2.6rem !important;
           background-color: transparent;
           color: var(--i);
           outline: none;
@@ -140,7 +140,7 @@
           font-size: 5rem;
 
           span {
-            letter-spacing: 0.7rem;
+            letter-spacing: 0.5rem;
           }
         }
 

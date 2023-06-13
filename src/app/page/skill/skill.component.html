@@ -1,82 +1,30 @@
 <div class="skillsContainer">
   <img src="../../../assets/imgs/Skill_Img.svg" alt="" class="Skills_Img" />
-  <div class="skills">
+  <div class="skills" *ngFor="let skill of skills">
     <div class="front">
       <h2>Front-End</h2>
       <div class="icons">
-        <div class="skillIcon">
-          <img src="../../../assets/icon/Html_Icon.svg" alt="Html" />
-          <span>Html</span>
-        </div>
-        <div class="skillIcon">
-          <img src="../../../assets/icon/Css_Icon.svg" alt="Css" />
-          <span>CSS</span>
-        </div>
-        <div class="skillIcon">
-          <img src="../../../assets/icon/Js_Icon.svg" alt="JavaScript" />
-          <span>JavaScript</span>
-        </div>
-        <div class="skillIcon">
-          <img src="../../../assets/icon/Angular_Icon.svg" alt="Angular" />
-          <span>Angular</span>
-        </div>
-        <div class="skillIcon">
-          <img src="../../../assets/icon/Ts_Icon.svg" alt="TypeScript" />
-          <span>TypeScript</span>
-        </div>
-        <div class="skillIcon">
-          <img src="../../../assets/icon/Bootstrap_Icon.svg" alt="Bootstrap" />
-          <span>Bootstrap</span>
-        </div>
-        <div class="skillIcon">
-          <img src="../../../assets/icon/Sass_Icon.svg" alt="Sass/ Scss" />
-          <span>Sass/Scss</span>
+        <div class="skillIcon" *ngFor="let frontSkill of skill.front">
+          <img src="{{ frontSkill.imgSrc }}" alt="{{ frontSkill.name }}" />
+          <span>{{ frontSkill.name }}</span>
         </div>
       </div>
     </div>
     <div class="back">
       <h2>Back-End</h2>
       <div class="icons">
-        <div class="skillIcon">
-          <img src="../../../assets/icon/Dotnet_Icon.svg" alt=".NET" />
-          <span>DotNet</span>
-        </div>
-        <div class="skillIcon">
-          <img src="../../../assets/icon/Csharp_Icon.svg" alt="C#" />
-          <span>CSharp</span>
-        </div>
-        <div class="skillIcon">
-          <img src="../../../assets/icon/MySQL_Icon.svg" alt="MySQL" />
-          <span>MySQL</span>
-        </div>
-        <div class="skillIcon">
-          <img src="../../../assets/icon/SQLServer_Icon.svg" alt="SQL Server" />
-          <span>SQL Server</span>
-        </div>
-        <div class="skillIcon">
-          <img src="../../../assets/icon/Java_Icon.svg" alt="Java" />
-          <span>Java</span>
+        <div class="skillIcon" *ngFor="let backSkill of skill.back">
+          <img src="{{ backSkill.imgSrc }}" alt="{{ backSkill.name }}" />
+          <span>{{ backSkill.name }}</span>
         </div>
       </div>
     </div>
     <div class="others">
       <h2>Outras</h2>
       <div class="icons">
-        <div class="skillIcon">
-          <img src="../../../assets/icon/Git_Icon.svg" alt="Git" />
-          <span>Git</span>
-        </div>
-        <div class="skillIcon">
-          <img src="../../../assets/icon/GitHub_Icon.svg" alt="GitHub" />
-          <span>GitHub</span>
-        </div>
-        <div class="skillIcon">
-          <img src="../../../assets/icon/Figma_Icon.svg" alt="Figma" />
-          <span>Figma</span>
-        </div>
-        <div class="skillIcon">
-          <img src="../../../assets/icon/Responsivity_Icon.svg" alt="Responvidade" />
-          <span>Responsividade</span>
+        <div class="skillIcon" *ngFor="let otherSkill of skill.other">
+          <img src="{{ otherSkill.imgSrc }}" alt="{{ otherSkill.name }}" />
+          <span>{{ otherSkill.name }}</span>
         </div>
       </div>
     </div>
