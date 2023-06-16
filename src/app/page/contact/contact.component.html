@@ -28,22 +28,23 @@
     </div>
   </div>
   <div class="formBox">
-    <form class="form" action="#">
+    <form class="form" action="https://formsubmit.co/rickfernandez03+contato@gmail.com" method="POST">
       <h2>Entre em Contato!</h2>
       <div class="inputBox">
-        <input type="text" required="required" id="topic"/>
-        <label for="topic">Assunto</label>
+        <input type="text" required="required" id="name" name="name"/>
+        <label for="name">Seu nome</label>
         <span></span>
       </div>
       <div class="inputBox">
-        <input type="text" required="required" id="name"/>
-        <label for="name">Seu nome</label>
+        <input type="text" required="required" id="subject" name="subject"/>
+        <label for="topic">Assunto</label>
         <span></span>
       </div>
       <textarea
         class="inputBox txtArea"
         placeholder="Sua mensagem..."
-        form="message"
+        for="message"
+        name="message"
       ></textarea>
       <button class="button">
         Enviar
